@@ -11,9 +11,8 @@
 axios
 .get('https://lambda-times-backend.herokuapp.com/topics')
 .then(response => {
-  console.log(response);
+  console.log('Topics:', response);
   topicList = response.data.topics;
-  console.log(topicList)
   topicList.forEach(element => {
       tab(element);
   });
